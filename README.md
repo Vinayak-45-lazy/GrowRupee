@@ -2,78 +2,111 @@
 
 > **Built for the Razorpay AI Builder Internship — Track 1: AI Growth & Agentic Commerce**
 
-PayPilot AI is an agentic food & product commerce platform designed to help merchants increase their **Average Order Value (AOV)** and **Revenue** through deterministic order co-occurrence analysis, natural-language Groq AI cart recommendations, and an integrated **Razorpay Test Mode** payment verification flow.
+PayPilot AI is an agentic food & product commerce platform that helps merchants increase **Average Order Value (AOV)** and **Revenue** through deterministic order co-occurrence analysis, natural-language Groq AI cart recommendations, and an integrated **Razorpay Test Mode** payment verification flow.
 
 ---
 
-## ⚡ Core Story & End-to-End Demo Flow
+## 🎯 Problem Statement & Track 1 Alignment
 
-1. **Merchant Order History**: Store historical data (~75 past orders) contains purchasing patterns (e.g., Gourmet Cheeseburger + Crispy Garlic Fries are frequently bought together).
-2. **Deterministic Co-Occurrence Engine**: When a customer adds an item to their cart, Express calculates co-occurrence frequencies over historical orders.
-3. **Groq AI Cart Upsell**: Groq Llama 3 phrases the top co-occurring item into an appetizing, natural-language offer (*"Pairs perfectly with your Gourmet Cheeseburger — add Crispy Garlic Fries for just ₹90!"*).
-4. **Razorpay Test Mode Checkout**: Customer accepts the upsell, and completes test payment via Razorpay Checkout.
-5. **HMAC SHA256 Verification**: Backend verifies the Razorpay signature against Key Secret and marks the Firestore order status as `paid`.
-6. **Merchant Dashboard & Growth Agent**: Merchant views real-time metrics (Revenue, AOV, Best Sellers, Upsell Acceptance Rate) and asks the **Groq AI Growth Advisor** for actionable business strategies.
+Traditional e-commerce platforms treat cross-selling and growth advice as passive, static rule sets or separate back-office reports. 
+
+**PayPilot AI turns commerce into an active agentic growth loop**:
+- **Deterministic Analytics Engine**: Computes real item co-occurrence frequencies from past merchant orders in Express.
+- **Agentic Checkout Upsell**: Uses Groq Llama 3 to phrase high-converting, personalized complementary offers directly inside the customer's cart.
+- **Razorpay Test Payments**: Seamlessly processes orders with end-to-end HMAC-SHA256 signature verification.
+- **AI Growth Advisor**: Summarizes store performance metrics into structured data and prompts Groq Llama 3 to output actionable strategies (bundling, pricing, AOV optimization) for the merchant.
+
+> [!NOTE]
+> **Razorpay Integration Notice**: This application uses **Razorpay Test Mode APIs only** (Key ID / Secret). No real payments or credit cards are involved.
 
 ---
 
-## 🏗️ Architecture & Tech Stack
+## ✨ Key Features
+
+1. **AI Co-Occurrence Cart Upsell**:
+   - Analyzes cart items against historical order patterns.
+   - Groq Llama 3 phrases appetizing complementary offers (*"Pairs perfectly with your Gourmet Cheeseburger — add Crispy Garlic Fries for just ₹90!"*).
+   - One-click upsell acceptance with dynamic total recalculation.
+
+2. **Razorpay Test Mode Checkout & Verification**:
+   - Backend calls Razorpay Orders API (`/api/create-order`) to generate a valid `razorpay_order_id`.
+   - Opens official `Checkout.js` modal on the customer frontend.
+   - HMAC-SHA256 signature verification (`/api/verify-payment`) confirms payment validity and updates order status to `paid` or `failed`.
+
+3. **Merchant Growth Dashboard**:
+   - Computes Total Revenue, Average Order Value (AOV), Upsell Acceptance Rate, and Best-Selling Products deterministically from Firestore data.
+   - Highlights top co-occurrence pair opportunities (e.g. *Burger + Garlic Fries*).
+
+4. **AI Merchant Growth Advisor**:
+   - Interactive panel allowing merchants to ask strategic questions (*"How can I boost my AOV?"*).
+   - Express aggregates raw store numbers into a compact summary, and Groq generates executive business plans.
+
+5. **Merchant Orders Management**:
+   - Live transaction tracking table with order items, base amount vs AI upsell impact, Razorpay payment IDs, and status badges (`PAID`, `CREATED`, `FAILED`).
+
+---
+
+## 🏗️ System Architecture
 
 ```
-React Frontend (Vite + Tailwind CSS)
-       │
-       ▼
-Node.js + Express Backend Service (Single Express Server)
-   ├── /api/products         → Firestore Catalog CRUD
-   ├── /api/orders           → Firestore Orders & Aggregations
-   ├── /api/recommend        → Express Co-occurrence + Groq Llama 3 Phrasing
-   ├── /api/insight          → Deterministic Store Summary + Groq Strategy
-   ├── /api/create-order     → Razorpay Orders API (Test Mode)
-   └── /api/verify-payment   → HMAC SHA256 Signature Verification
-       │
-       ▼
-Firebase Firestore (Data) + Razorpay Test API (Payments) + Groq API (AI)
+┌────────────────────────────────────────────────────────┐
+│             React Frontend (Vite + Tailwind)           │
+│     Storefront • Cart Drawer • Merchant Dashboard      │
+└──────────────────────────┬─────────────────────────────┘
+                           │
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│             Node.js + Express Backend Service          │
+│  ├── /api/products   → Firestore Catalog CRUD          │
+│  ├── /api/orders     → Deterministic Analytics         │
+│  ├── /api/recommend  → Co-occurrence + Groq Phrasing   │
+│  ├── /api/insight    → Stats Summary + Groq Strategy   │
+│  ├── /api/create-order   → Razorpay Orders API (Test)  │
+│  └── /api/verify-payment → HMAC-SHA256 Verification    │
+└──────────┬───────────────────┬───────────────────┬─────┘
+           │                   │                   │
+           ▼                   ▼                   ▼
+┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐
+│ Firebase Admin   │ │ Razorpay Test    │ │ Groq Llama 3 API │
+│ Firestore Data   │ │ Checkout SDK     │ │ AI Agent Engine  │
+└──────────────────┘ └──────────────────┘ └──────────────────┘
 ```
 
-- **Frontend**: React, Vite, Tailwind CSS, Lucide Icons, Firebase Auth SDK
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, Vite, Tailwind CSS, Lucide Icons, Firebase JS SDK
 - **Backend**: Node.js, Express, Firebase Admin SDK, Razorpay Node SDK, Groq SDK
-- **Database**: Firebase Firestore (Native mode) + Zero-Config In-Memory Mock Fallback
-- **Payments**: Razorpay Test Mode (`checkout.js` + HMAC-SHA256 signature verification)
-- **AI Engine**: Groq API (Llama 3.3 models) for natural language phrasing and strategic insights
+- **Database**: Firebase Firestore (Native mode) + Zero-Config Local Mock DB Fallback
+- **Payments**: Razorpay Test Mode (`checkout.js` modal + HMAC-SHA256 verification)
+- **AI Engine**: Groq API (`llama-3.3-70b-versatile` model)
 
 ---
 
-## 🛠️ Project Setup & Installation Guide
+## 🚀 Setup & Installation Guide
 
-### Prerequisites
-- Node.js v18+ and npm installed
-
-### 1. Repository Structure
-```
-paypilot-ai/
-├── client/          # React + Vite + Tailwind CSS
-├── server/          # Node.js + Express Backend
-├── seed/            # Seeding script for historical order data
-└── README.md
-```
-
-### 2. Install Dependencies
+### 1. Clone & Install Dependencies
 
 ```bash
-# Install Server Dependencies
+# Clone the repository
+git clone https://github.com/Vinayak-45-lazy/GrowRupee.git
+cd GrowRupee
+
+# Install Backend Dependencies
 cd server
 npm install
 
-# Install Client Dependencies
+# Install Frontend Dependencies
 cd ../client
 npm install
 ```
 
-### 3. Environment Variables Setup
+### 2. Environment Variables Configuration
 
-Create `.env` files in both `server/` and `client/` directories based on the `.env.example` templates.
+Copy template files in both `server/` and `client/`:
 
-#### `server/.env`
+#### Server Configuration (`server/.env`)
 ```env
 PORT=5000
 GROQ_API_KEY=gsk_your_groq_api_key_here
@@ -84,7 +117,7 @@ FIREBASE_CLIENT_EMAIL=your-firebase-client-email
 FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_KEY_HERE\n-----END PRIVATE KEY-----\n"
 ```
 
-#### `client/.env`
+#### Client Configuration (`client/.env`)
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api
 VITE_RAZORPAY_KEY_ID=rzp_test_your_key_id_here
@@ -93,61 +126,53 @@ VITE_FIREBASE_AUTH_DOMAIN=your-app.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your-app-id
 ```
 
-> **Note**: PayPilot AI includes a **Zero-Config Fallback Mode**. If API keys are missing, the server will seamlessly run using in-memory mock stores and template-driven responses, allowing instant local testing without setting up external accounts!
+> [!TIP]
+> **Zero-Config Fallback Mode**: If environment variables are omitted, PayPilot AI automatically runs in local mock mode so evaluators can instantly test the app out-of-the-box!
 
 ---
 
-### 4. Seed the Database
+### 3. Seed Firestore Database
 
-Populate Firestore with 8 gourmet food items and ~75 historical orders containing realistic co-occurrence relationships:
+Populate the database with 8 gourmet products and **75 realistic order histories** with co-occurrence data:
 
 ```bash
-# Run from root directory
+# Run seeding script from root directory
 node seed/seedData.js
 ```
 
 ---
 
-### 5. Running the Application Locally
+### 4. Run Locally
 
-#### Start the Express Backend (Port 5000)
 ```bash
+# Start Backend Server (Port 5000)
 cd server
-npm run dev
-```
+npm start
 
-#### Start the React Frontend (Port 3000)
-```bash
+# Start Frontend App (Port 3000)
 cd client
 npm run dev
 ```
 
-Open your browser at `http://localhost:3000`.
+Open `http://localhost:3000` in your browser.
 
 ---
 
-## 🎯 Verification & Demo Workflow
+## 🌐 Live Deployment Instructions
 
-1. **Customer Cart & AI Recommendation**:
-   - Navigate to `http://localhost:3000/` (Storefront).
-   - Add **Gourmet Cheeseburger** to your cart.
-   - Open Cart -> See live **AI Growth Opportunity** banner (*"Pairs perfectly with your Gourmet Cheeseburger — add Crispy Garlic Fries for just ₹90!"*).
-   - Click **Add for ₹90**. Notice the total updates dynamically to include the upsell item.
+- **Frontend Hosting**: Vercel (`client` folder, Vite preset)
+- **Backend Hosting**: Render Web Service (`server` folder, Node.js)
 
-2. **Razorpay Test Payment & Signature Verification**:
-   - Click **Pay ₹270 with Razorpay Test**.
-   - Complete payment via Razorpay's Test Mode Checkout modal.
-   - Observe signature verification confirmation and receipt display.
-
-3. **Merchant Analytics & AI Advisor**:
-   - Click **Merchant Login** (or 1-Click Demo Login).
-   - View **Dashboard** metrics: Total Revenue, Average Order Value (AOV), Upsell Acceptance Rate, Best Sellers.
-   - Go to **AI Growth Insights** -> Click *"How can I grow total sales this month?"* -> View Groq-generated strategic business plan.
-   - Go to **Orders List** -> Verify your completed test transaction appears with `PAID` status and Razorpay Payment ID.
+### Demo Evaluation Steps:
+1. Open Storefront → Add **Gourmet Cheeseburger** to cart.
+2. Open Cart → Observe live **AI Co-Occurrence Recommendation** (*Crispy Garlic Fries*).
+3. Click **Add for ₹90** → Notice dynamic subtotal calculation.
+4. Click **Pay with Razorpay Test** → Complete transaction via Razorpay modal.
+5. Click **Merchant Login** (or 1-Click Demo Login) → View **Dashboard Analytics** & **AI Growth Insights**.
 
 ---
 
-## 📜 Key Architectural Distinction
+## 📜 Architectural Integrity
 
-- **Deterministic Analytics (Express)**: Co-occurrence frequencies, order totals, revenue aggregations, AOV, and best-seller counts are calculated mathematically in Express. LLMs do not guess numbers.
-- **Natural Language Phrasing (Groq API)**: Groq's only job is converting raw co-occurrence data and structured store summaries into natural, appetizing customer offers and executive merchant growth strategies.
+- **Math is Math (Express)**: Revenue, AOV, best-seller counts, and co-occurrence matrix frequencies are calculated mathematically in Express. LLMs never invent numbers.
+- **Language is Language (Groq)**: Groq's sole responsibility is converting raw co-occurrence data into natural customer offers and executive merchant growth strategies.
