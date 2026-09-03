@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { merchantLogin } from '../firebase/firebaseClient';
 import { BrainCircuit, Lock, Mail, ArrowRight, Sparkles } from 'lucide-react';
 
@@ -9,6 +9,9 @@ export default function MerchantLogin() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const redirectPath = location.state?.from?.pathname || '/merchant/dashboard';
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,7 +19,7 @@ export default function MerchantLogin() {
       setLoading(true);
       setError(null);
       await merchantLogin(email, password);
-      navigate('/merchant/dashboard');
+      navigate(redirectPath, { replace: true });
     } catch (err) {
       console.error('Login error:', err);
       setError(err.message || 'Failed to authenticate merchant');
@@ -31,7 +34,7 @@ export default function MerchantLogin() {
     try {
       setLoading(true);
       await merchantLogin('merchant@paypilot.ai', 'password123');
-      navigate('/merchant/dashboard');
+      navigate(redirectPath, { replace: true });
     } catch (err) {
       setError(err.message);
     } finally {

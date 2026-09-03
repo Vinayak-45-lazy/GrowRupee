@@ -9,6 +9,8 @@ import MerchantInsights from './pages/MerchantInsights';
 import Orders from './pages/Orders';
 import { X } from 'lucide-react';
 
+import ProtectedRoute from './components/ProtectedRoute';
+
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -70,9 +72,30 @@ export default function App() {
                 }
               />
               <Route path="/login" element={<MerchantLogin />} />
-              <Route path="/merchant/dashboard" element={<MerchantDashboard />} />
-              <Route path="/merchant/insights" element={<MerchantInsights />} />
-              <Route path="/orders" element={<Orders />} />
+              <Route
+                path="/merchant/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <MerchantDashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/merchant/insights"
+                element={
+                  <ProtectedRoute>
+                    <MerchantInsights />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/orders"
+                element={
+                  <ProtectedRoute>
+                    <Orders />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
