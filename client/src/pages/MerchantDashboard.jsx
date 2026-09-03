@@ -217,7 +217,7 @@ export default function MerchantDashboard() {
               {recentOrders.map((order) => (
                 <tr key={order.id} className="hover:bg-slate-900/40 transition-colors">
                   <td className="py-3">
-                    <span className="font-bold text-slate-200 block">{order.customerName || 'Guest Customer'}</span>
+                    <span className="font-bold text-slate-200 block max-w-[150px] truncate" title={order.customerName || 'Guest Customer'}>{order.customerName || 'Guest Customer'}</span>
                     <span className="font-mono text-[11px] text-slate-400 block">{order.id}</span>
                   </td>
                   <td className="py-3 text-slate-200">

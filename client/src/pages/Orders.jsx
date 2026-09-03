@@ -124,7 +124,7 @@ export default function Orders() {
                       
                       {/* Customer Name, Order ID & Date */}
                       <td className="p-4">
-                        <span className="font-bold text-slate-100 text-xs block">{order.customerName || 'Guest Customer'}</span>
+                        <span className="font-bold text-slate-100 text-xs block max-w-[180px] truncate" title={order.customerName || 'Guest Customer'}>{order.customerName || 'Guest Customer'}</span>
                         <span className="font-mono text-[11px] text-slate-400 block">{order.id}</span>
                         <span className="text-[10px] text-slate-500">
                           {order.createdAt ? new Date(order.createdAt).toLocaleString('en-IN') : 'N/A'}

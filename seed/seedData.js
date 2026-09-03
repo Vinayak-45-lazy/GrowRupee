@@ -96,6 +96,8 @@ async function seedDatabase() {
   // 3. Generate 75 Historical Orders with Strong Co-occurrence Patterns
   console.log('🔄 Generating 75 realistic order histories with co-occurrence data...');
 
+  if (mockStore) mockStore.orders = {};
+
   const now = Date.now();
   const dayMs = 24 * 60 * 60 * 1000;
   const createdOrders = [];
