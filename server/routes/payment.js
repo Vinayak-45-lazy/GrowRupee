@@ -7,7 +7,7 @@ const router = express.Router();
 // POST /api/create-order - Create Firestore order record + Razorpay Order
 router.post('/create-order', async (req, res) => {
   try {
-    const { items, baseAmount, upsellAdded = false, upsellAmount = 0, customerId = 'cust_guest', merchantId = 'merchant_default' } = req.body;
+    const { items, baseAmount, upsellAdded = false, upsellAmount = 0, customerId = 'cust_guest', customerName = 'Guest Customer', merchantId = 'merchant_default' } = req.body;
 
     if (!items || !Array.isArray(items) || items.length === 0 || baseAmount == null) {
       return res.status(400).json({ success: false, error: 'Invalid order payload' });
@@ -20,6 +20,7 @@ router.post('/create-order', async (req, res) => {
     const orderDoc = {
       merchantId,
       customerId,
+      customerName,
       items,
       baseAmount: Number(baseAmount),
       upsellAdded: Boolean(upsellAdded),

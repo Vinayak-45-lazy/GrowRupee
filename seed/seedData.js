@@ -109,9 +109,19 @@ async function seedDatabase() {
   const cakeItem = { productId: 'prod_lavacake_07', name: 'Chocolate Lava Cake', qty: 1, price: 110 };
   const coffeeItem = { productId: 'prod_coffee_08', name: 'Iced Hazelnut Cold Coffee', qty: 1, price: 95 };
 
+  const customerNames = [
+    "Ramesh Sharma", "Priya Patel", "Rahul Verma", "Ananya Singh", "Amit Kumar",
+    "Neha Gupta", "Karan Malhotra", "Deepika Joshi", "Siddharth Rao", "Rohan Mehta",
+    "Vikram Das", "Pooja Hegde", "Aditya Nair", "Sneha Iyer", "Tanvi Kulkarni",
+    "Arjun Reddy", "Meera Sen", "Varun Kapoor", "Shreya Roy", "Gautam Gambhir",
+    "Simran Kaur", "Abhinav Bindra", "Nikhil D'Souza", "Ritika Roy", "Aakash Banerjee"
+  ];
+
   for (let i = 1; i <= 75; i++) {
     const orderDate = new Date(now - (Math.floor(Math.random() * 28) * dayMs + Math.floor(Math.random() * dayMs))).toISOString();
-    const customerId = `cust_${100 + (i % 25)}`;
+    const custIdx = (i - 1) % customerNames.length;
+    const customerId = `cust_${100 + custIdx}`;
+    const customerName = customerNames[custIdx];
 
     let items = [];
     let upsellAdded = false;
@@ -169,6 +179,7 @@ async function seedDatabase() {
     const orderDoc = {
       merchantId,
       customerId,
+      customerName,
       items,
       baseAmount,
       upsellAdded,

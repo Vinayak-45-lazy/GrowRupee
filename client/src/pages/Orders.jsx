@@ -35,6 +35,7 @@ export default function Orders() {
     const searchLower = searchTerm.toLowerCase();
     const matchesSearch =
       order.id.toLowerCase().includes(searchLower) ||
+      (order.customerName || '').toLowerCase().includes(searchLower) ||
       (order.razorpayPaymentId || '').toLowerCase().includes(searchLower) ||
       (order.items || []).some((i) => i.name.toLowerCase().includes(searchLower));
 
@@ -81,7 +82,7 @@ export default function Orders() {
         <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
         <input
           type="text"
-          placeholder="Search by Order ID, Payment ID, or Item Name..."
+          placeholder="Search by Customer Name, Order ID, Payment ID, or Item..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full bg-slate-900 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500/50"
@@ -104,8 +105,8 @@ export default function Orders() {
             <table className="w-full text-left text-xs">
               <thead className="bg-slate-900/80 text-slate-400 border-b border-slate-800">
                 <tr>
-                  <th className="p-4 font-semibold">Order ID</th>
-                  <th className="p-4 font-semibold">Customer Items</th>
+                  <th className="p-4 font-semibold">Customer & Order</th>
+                  <th className="p-4 font-semibold">Ordered Items</th>
                   <th className="p-4 font-semibold">Base Amount</th>
                   <th className="p-4 font-semibold">AI Upsell Impact</th>
                   <th className="p-4 font-semibold">Total Amount</th>
@@ -121,9 +122,10 @@ export default function Orders() {
                   return (
                     <tr key={order.id} className="hover:bg-slate-900/40 transition-colors">
                       
-                      {/* Order ID & Date */}
-                      <td className="p-4 font-mono">
-                        <span className="font-bold text-slate-200 block">{order.id}</span>
+                      {/* Customer Name, Order ID & Date */}
+                      <td className="p-4">
+                        <span className="font-bold text-slate-100 text-xs block">{order.customerName || 'Guest Customer'}</span>
+                        <span className="font-mono text-[11px] text-slate-400 block">{order.id}</span>
                         <span className="text-[10px] text-slate-500">
                           {order.createdAt ? new Date(order.createdAt).toLocaleString('en-IN') : 'N/A'}
                         </span>

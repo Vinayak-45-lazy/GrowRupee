@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { getCartRecommendation, createPaymentOrder, verifyPayment } from '../services/api';
 import UpsellBanner from '../components/UpsellBanner';
-import { ShoppingBag, Trash2, Plus, Minus, CreditCard, Sparkles, CheckCircle2, XCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ShoppingBag, Trash2, Plus, Minus, CreditCard, Sparkles, CheckCircle2, XCircle, ArrowRight, ShieldCheck, User } from 'lucide-react';
 
 export default function Cart({ cartItems, onUpdateQty, onRemoveItem, onClearCart, onClose }) {
   const [recommendation, setRecommendation] = useState(null);
   const [loadingAi, setLoadingAi] = useState(false);
   const [acceptedUpsell, setAcceptedUpsell] = useState(null); // Product object
+  const [customerName, setCustomerName] = useState('Ramesh Sharma');
+  const [nameError, setNameError] = useState(false);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [paymentResult, setPaymentResult] = useState(null); // { success, orderId, paymentId, message }
 
@@ -53,6 +55,12 @@ export default function Cart({ cartItems, onUpdateQty, onRemoveItem, onClearCart
   const handleRazorpayCheckout = async () => {
     if (cartItems.length === 0) return;
 
+    if (!customerName.trim()) {
+      setNameError(true);
+      return;
+    }
+    setNameError(false);
+
     try {
       setCheckoutLoading(true);
 
@@ -62,6 +70,7 @@ export default function Cart({ cartItems, onUpdateQty, onRemoveItem, onClearCart
         baseAmount,
         upsellAdded: Boolean(acceptedUpsell),
         upsellAmount,
+        customerName: customerName.trim(),
         merchantId: 'merchant_default',
       };
 
@@ -342,6 +351,31 @@ export default function Cart({ cartItems, onUpdateQty, onRemoveItem, onClearCart
               <span>Total Payable Amount</span>
               <span className="text-sky-400">₹{totalAmount}</span>
             </div>
+          </div>
+
+          {/* Customer Name Input Field */}
+          <div className="space-y-1">
+            <label className="block text-xs font-semibold text-slate-300">
+              Your Name <span className="text-rose-400">*</span>
+            </label>
+            <div className="relative">
+              <User className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-3" />
+              <input
+                type="text"
+                value={customerName}
+                onChange={(e) => {
+                  setCustomerName(e.target.value);
+                  if (e.target.value.trim()) setNameError(false);
+                }}
+                placeholder="Enter your name (e.g. Ramesh Sharma)"
+                className={`w-full bg-slate-900 border rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors ${
+                  nameError ? 'border-rose-500 focus:border-rose-400' : 'border-slate-800 focus:border-sky-500/50'
+                }`}
+              />
+            </div>
+            {nameError && (
+              <p className="text-[11px] text-rose-400 font-medium">Please enter your name to proceed.</p>
+            )}
           </div>
 
           <button

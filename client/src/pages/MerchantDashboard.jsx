@@ -206,7 +206,7 @@ export default function MerchantDashboard() {
           <table className="w-full text-left text-xs">
             <thead>
               <tr className="text-slate-400 border-b border-slate-800">
-                <th className="pb-3 font-semibold">Order ID</th>
+                <th className="pb-3 font-semibold">Customer & Order</th>
                 <th className="pb-3 font-semibold">Items</th>
                 <th className="pb-3 font-semibold">Total</th>
                 <th className="pb-3 font-semibold">AI Upsell</th>
@@ -216,7 +216,10 @@ export default function MerchantDashboard() {
             <tbody className="divide-y divide-slate-800/60">
               {recentOrders.map((order) => (
                 <tr key={order.id} className="hover:bg-slate-900/40 transition-colors">
-                  <td className="py-3 font-mono text-slate-300">{order.id}</td>
+                  <td className="py-3">
+                    <span className="font-bold text-slate-200 block">{order.customerName || 'Guest Customer'}</span>
+                    <span className="font-mono text-[11px] text-slate-400 block">{order.id}</span>
+                  </td>
                   <td className="py-3 text-slate-200">
                     {(order.items || []).map((i) => i.name).join(', ')}
                   </td>
