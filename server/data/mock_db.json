@@ -1,0 +1,2253 @@
+{
+  "merchants": {
+    "merchant_default": {
+      "name": "Alex Rivera",
+      "email": "merchant@paypilot.ai",
+      "storeName": "Urban Bites & Brews",
+      "category": "Gourmet Fast Casual",
+      "currency": "INR",
+      "createdAt": "2026-08-04T04:20:16.616Z"
+    }
+  },
+  "products": {
+    "prod_burger_01": {
+      "merchantId": "merchant_default",
+      "name": "Gourmet Cheeseburger",
+      "price": 180,
+      "category": "Burgers",
+      "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=80"
+    },
+    "prod_fries_02": {
+      "merchantId": "merchant_default",
+      "name": "Crispy Garlic Fries",
+      "price": 90,
+      "category": "Sides",
+      "imageUrl": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&auto=format&fit=crop&q=80"
+    },
+    "prod_coke_03": {
+      "merchantId": "merchant_default",
+      "name": "Chilled Coca-Cola (500ml)",
+      "price": 45,
+      "category": "Beverages",
+      "imageUrl": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600&auto=format&fit=crop&q=80"
+    },
+    "prod_pizza_04": {
+      "merchantId": "merchant_default",
+      "name": "Margherita Woodfired Pizza",
+      "price": 280,
+      "category": "Pizzas",
+      "imageUrl": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600&auto=format&fit=crop&q=80"
+    },
+    "prod_garlicbread_05": {
+      "merchantId": "merchant_default",
+      "name": "Cheesy Garlic Breadsticks",
+      "price": 120,
+      "category": "Sides",
+      "imageUrl": "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=600&auto=format&fit=crop&q=80"
+    },
+    "prod_wings_06": {
+      "merchantId": "merchant_default",
+      "name": "Spicy Buffalo Wings (6pcs)",
+      "price": 210,
+      "category": "Appetizers",
+      "imageUrl": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=600&auto=format&fit=crop&q=80"
+    },
+    "prod_lavacake_07": {
+      "merchantId": "merchant_default",
+      "name": "Chocolate Lava Cake",
+      "price": 110,
+      "category": "Desserts",
+      "imageUrl": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop&q=80"
+    },
+    "prod_coffee_08": {
+      "merchantId": "merchant_default",
+      "name": "Iced Hazelnut Cold Coffee",
+      "price": 95,
+      "category": "Beverages",
+      "imageUrl": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&auto=format&fit=crop&q=80"
+    }
+  },
+  "orders": {
+    "ord_seed_1001": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_101",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216623_1",
+      "razorpayPaymentId": "pay_seed_1788409216623_1",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-17T01:25:23.513Z"
+    },
+    "ord_seed_1002": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_102",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216623_2",
+      "razorpayPaymentId": "pay_seed_1788409216623_2",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-06T13:21:00.441Z"
+    },
+    "ord_seed_1003": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_103",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216624_3",
+      "razorpayPaymentId": "pay_seed_1788409216624_3",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-30T23:10:35.974Z"
+    },
+    "ord_seed_1004": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_104",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216624_4",
+      "razorpayPaymentId": "pay_seed_1788409216624_4",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-22T17:23:45.954Z"
+    },
+    "ord_seed_1005": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_105",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216625_5",
+      "razorpayPaymentId": "pay_seed_1788409216625_5",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-15T10:08:49.027Z"
+    },
+    "ord_seed_1006": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_106",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216625_6",
+      "razorpayPaymentId": "pay_seed_1788409216625_6",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-13T21:21:11.572Z"
+    },
+    "ord_seed_1007": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_107",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216626_7",
+      "razorpayPaymentId": "pay_seed_1788409216626_7",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-13T01:40:00.001Z"
+    },
+    "ord_seed_1008": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_108",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        }
+      ],
+      "baseAmount": 280,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 280,
+      "razorpayOrderId": "order_seed_1788409216626_8",
+      "razorpayPaymentId": "pay_seed_1788409216626_8",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-31T06:23:29.679Z"
+    },
+    "ord_seed_1009": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_109",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216627_9",
+      "razorpayPaymentId": "",
+      "paymentStatus": "created",
+      "createdAt": "2026-09-02T08:02:08.507Z"
+    },
+    "ord_seed_1010": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_110",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216627_10",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-08-11T21:48:12.721Z"
+    },
+    "ord_seed_1011": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_111",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 270,
+      "razorpayOrderId": "order_seed_1788409216628_11",
+      "razorpayPaymentId": "pay_seed_1788409216628_11",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-06T18:06:51.528Z"
+    },
+    "ord_seed_1012": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_112",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216628_12",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-08-13T04:04:01.833Z"
+    },
+    "ord_seed_1013": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_113",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216628_13",
+      "razorpayPaymentId": "pay_seed_1788409216628_13",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-12T03:04:27.900Z"
+    },
+    "ord_seed_1014": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_114",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216629_14",
+      "razorpayPaymentId": "pay_seed_1788409216629_14",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-26T19:13:15.789Z"
+    },
+    "ord_seed_1015": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_115",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216629_15",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-08-31T10:09:21.980Z"
+    },
+    "ord_seed_1016": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_116",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 270,
+      "razorpayOrderId": "order_seed_1788409216630_16",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-08-15T14:38:52.974Z"
+    },
+    "ord_seed_1017": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_117",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216631_17",
+      "razorpayPaymentId": "pay_seed_1788409216631_17",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-29T06:53:45.804Z"
+    },
+    "ord_seed_1018": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_118",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216631_18",
+      "razorpayPaymentId": "pay_seed_1788409216631_18",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-17T20:29:46.629Z"
+    },
+    "ord_seed_1019": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_119",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216632_19",
+      "razorpayPaymentId": "pay_seed_1788409216632_19",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-27T16:48:55.852Z"
+    },
+    "ord_seed_1020": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_120",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216632_20",
+      "razorpayPaymentId": "",
+      "paymentStatus": "created",
+      "createdAt": "2026-08-25T17:03:06.828Z"
+    },
+    "ord_seed_1021": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_121",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216633_21",
+      "razorpayPaymentId": "pay_seed_1788409216633_21",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-09T13:38:39.229Z"
+    },
+    "ord_seed_1022": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_122",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216633_22",
+      "razorpayPaymentId": "pay_seed_1788409216633_22",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-20T05:38:50.522Z"
+    },
+    "ord_seed_1023": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_123",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216634_23",
+      "razorpayPaymentId": "pay_seed_1788409216634_23",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-22T21:38:41.930Z"
+    },
+    "ord_seed_1024": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_124",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216635_24",
+      "razorpayPaymentId": "pay_seed_1788409216635_24",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-14T22:54:25.930Z"
+    },
+    "ord_seed_1025": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_100",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216636_25",
+      "razorpayPaymentId": "pay_seed_1788409216636_25",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-25T00:39:02.424Z"
+    },
+    "ord_seed_1026": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_101",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216636_26",
+      "razorpayPaymentId": "pay_seed_1788409216636_26",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-22T16:10:31.999Z"
+    },
+    "ord_seed_1027": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_102",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216637_27",
+      "razorpayPaymentId": "pay_seed_1788409216637_27",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-14T03:43:24.254Z"
+    },
+    "ord_seed_1028": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_103",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216638_28",
+      "razorpayPaymentId": "pay_seed_1788409216638_28",
+      "paymentStatus": "paid",
+      "createdAt": "2026-09-01T17:55:38.336Z"
+    },
+    "ord_seed_1029": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_104",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216638_29",
+      "razorpayPaymentId": "pay_seed_1788409216638_29",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-17T15:57:12.932Z"
+    },
+    "ord_seed_1030": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_105",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        }
+      ],
+      "baseAmount": 280,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 280,
+      "razorpayOrderId": "order_seed_1788409216639_30",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-08-21T05:15:23.914Z"
+    },
+    "ord_seed_1031": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_106",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 270,
+      "razorpayOrderId": "order_seed_1788409216639_31",
+      "razorpayPaymentId": "pay_seed_1788409216639_31",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-29T10:10:30.169Z"
+    },
+    "ord_seed_1032": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_107",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216640_32",
+      "razorpayPaymentId": "pay_seed_1788409216640_32",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-31T15:16:29.974Z"
+    },
+    "ord_seed_1033": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_108",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216641_33",
+      "razorpayPaymentId": "pay_seed_1788409216641_33",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-17T20:45:18.504Z"
+    },
+    "ord_seed_1034": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_109",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216641_34",
+      "razorpayPaymentId": "pay_seed_1788409216641_34",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-06T13:44:43.474Z"
+    },
+    "ord_seed_1035": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_110",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216642_35",
+      "razorpayPaymentId": "pay_seed_1788409216642_35",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-15T09:46:13.488Z"
+    },
+    "ord_seed_1036": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_111",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 270,
+      "razorpayOrderId": "order_seed_1788409216642_36",
+      "razorpayPaymentId": "pay_seed_1788409216642_36",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-16T22:36:53.779Z"
+    },
+    "ord_seed_1037": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_112",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        }
+      ],
+      "baseAmount": 280,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 280,
+      "razorpayOrderId": "order_seed_1788409216643_37",
+      "razorpayPaymentId": "pay_seed_1788409216643_37",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-20T13:52:39.551Z"
+    },
+    "ord_seed_1038": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_113",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216643_38",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-09-02T10:01:26.361Z"
+    },
+    "ord_seed_1039": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_114",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216644_39",
+      "razorpayPaymentId": "pay_seed_1788409216644_39",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-15T19:14:43.468Z"
+    },
+    "ord_seed_1040": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_115",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216644_40",
+      "razorpayPaymentId": "pay_seed_1788409216644_40",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-09T23:26:22.932Z"
+    },
+    "ord_seed_1041": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_116",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216645_41",
+      "razorpayPaymentId": "pay_seed_1788409216645_41",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-30T17:35:09.748Z"
+    },
+    "ord_seed_1042": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_117",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216645_42",
+      "razorpayPaymentId": "pay_seed_1788409216645_42",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-17T03:32:01.219Z"
+    },
+    "ord_seed_1043": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_118",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216646_43",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-08-31T23:19:14.780Z"
+    },
+    "ord_seed_1044": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_119",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216646_44",
+      "razorpayPaymentId": "pay_seed_1788409216646_44",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-20T10:18:27.578Z"
+    },
+    "ord_seed_1045": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_120",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216647_45",
+      "razorpayPaymentId": "pay_seed_1788409216647_45",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-15T10:44:40.100Z"
+    },
+    "ord_seed_1046": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_121",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216647_46",
+      "razorpayPaymentId": "pay_seed_1788409216647_46",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-12T04:58:26.110Z"
+    },
+    "ord_seed_1047": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_122",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216648_47",
+      "razorpayPaymentId": "pay_seed_1788409216648_47",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-14T20:04:14.492Z"
+    },
+    "ord_seed_1048": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_123",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216648_48",
+      "razorpayPaymentId": "pay_seed_1788409216648_48",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-30T16:36:37.895Z"
+    },
+    "ord_seed_1049": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_124",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216649_49",
+      "razorpayPaymentId": "",
+      "paymentStatus": "created",
+      "createdAt": "2026-08-23T16:46:46.365Z"
+    },
+    "ord_seed_1050": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_100",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216650_50",
+      "razorpayPaymentId": "pay_seed_1788409216650_50",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-27T13:16:27.329Z"
+    },
+    "ord_seed_1051": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_101",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        }
+      ],
+      "baseAmount": 280,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 280,
+      "razorpayOrderId": "order_seed_1788409216650_51",
+      "razorpayPaymentId": "",
+      "paymentStatus": "created",
+      "createdAt": "2026-08-20T09:24:59.182Z"
+    },
+    "ord_seed_1052": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_102",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216651_52",
+      "razorpayPaymentId": "pay_seed_1788409216651_52",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-27T11:30:52.397Z"
+    },
+    "ord_seed_1053": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_103",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216651_53",
+      "razorpayPaymentId": "",
+      "paymentStatus": "created",
+      "createdAt": "2026-08-31T18:26:26.993Z"
+    },
+    "ord_seed_1054": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_104",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216652_54",
+      "razorpayPaymentId": "pay_seed_1788409216652_54",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-18T06:19:05.366Z"
+    },
+    "ord_seed_1055": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_105",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216652_55",
+      "razorpayPaymentId": "",
+      "paymentStatus": "created",
+      "createdAt": "2026-08-11T12:11:50.933Z"
+    },
+    "ord_seed_1056": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_106",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216654_56",
+      "razorpayPaymentId": "pay_seed_1788409216654_56",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-20T16:10:32.208Z"
+    },
+    "ord_seed_1057": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_107",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216655_57",
+      "razorpayPaymentId": "pay_seed_1788409216655_57",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-14T21:05:33.165Z"
+    },
+    "ord_seed_1058": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_108",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216655_58",
+      "razorpayPaymentId": "pay_seed_1788409216655_58",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-13T19:12:35.080Z"
+    },
+    "ord_seed_1059": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_109",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216656_59",
+      "razorpayPaymentId": "pay_seed_1788409216656_59",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-10T18:37:42.974Z"
+    },
+    "ord_seed_1060": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_110",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 270,
+      "razorpayOrderId": "order_seed_1788409216656_60",
+      "razorpayPaymentId": "pay_seed_1788409216656_60",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-24T20:27:36.251Z"
+    },
+    "ord_seed_1061": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_111",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216657_61",
+      "razorpayPaymentId": "pay_seed_1788409216657_61",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-17T03:22:22.795Z"
+    },
+    "ord_seed_1062": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_112",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        }
+      ],
+      "baseAmount": 280,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 280,
+      "razorpayOrderId": "order_seed_1788409216658_62",
+      "razorpayPaymentId": "",
+      "paymentStatus": "created",
+      "createdAt": "2026-08-25T02:19:14.867Z"
+    },
+    "ord_seed_1063": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_113",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216658_63",
+      "razorpayPaymentId": "pay_seed_1788409216658_63",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-15T02:45:08.256Z"
+    },
+    "ord_seed_1064": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_114",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216659_64",
+      "razorpayPaymentId": "pay_seed_1788409216659_64",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-26T01:04:58.027Z"
+    },
+    "ord_seed_1065": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_115",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216659_65",
+      "razorpayPaymentId": "pay_seed_1788409216659_65",
+      "paymentStatus": "paid",
+      "createdAt": "2026-09-01T01:37:31.708Z"
+    },
+    "ord_seed_1066": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_116",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        }
+      ],
+      "baseAmount": 280,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 280,
+      "razorpayOrderId": "order_seed_1788409216660_66",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-08-26T14:00:45.294Z"
+    },
+    "ord_seed_1067": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_117",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216660_67",
+      "razorpayPaymentId": "pay_seed_1788409216660_67",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-31T17:03:42.962Z"
+    },
+    "ord_seed_1068": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_118",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        }
+      ],
+      "baseAmount": 280,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 280,
+      "razorpayOrderId": "order_seed_1788409216661_68",
+      "razorpayPaymentId": "pay_seed_1788409216661_68",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-26T18:46:41.683Z"
+    },
+    "ord_seed_1069": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_119",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216662_69",
+      "razorpayPaymentId": "pay_seed_1788409216662_69",
+      "paymentStatus": "paid",
+      "createdAt": "2026-09-01T06:17:48.987Z"
+    },
+    "ord_seed_1070": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_120",
+      "items": [
+        {
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1,
+          "price": 180
+        },
+        {
+          "productId": "prod_fries_02",
+          "name": "Crispy Garlic Fries",
+          "qty": 1,
+          "price": 90
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 270,
+      "upsellAdded": true,
+      "upsellAmount": 45,
+      "totalAmount": 315,
+      "razorpayOrderId": "order_seed_1788409216662_70",
+      "razorpayPaymentId": "pay_seed_1788409216662_70",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-17T16:47:27.253Z"
+    },
+    "ord_seed_1071": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_121",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 255,
+      "razorpayOrderId": "order_seed_1788409216663_71",
+      "razorpayPaymentId": "pay_seed_1788409216663_71",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-26T18:15:52.022Z"
+    },
+    "ord_seed_1072": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_122",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        },
+        {
+          "productId": "prod_coffee_08",
+          "name": "Iced Hazelnut Cold Coffee",
+          "qty": 1,
+          "price": 95
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": true,
+      "upsellAmount": 95,
+      "totalAmount": 495,
+      "razorpayOrderId": "order_seed_1788409216664_72",
+      "razorpayPaymentId": "pay_seed_1788409216664_72",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-06T20:09:34.676Z"
+    },
+    "ord_seed_1073": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_123",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216665_73",
+      "razorpayPaymentId": "pay_seed_1788409216665_73",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-24T15:01:05.052Z"
+    },
+    "ord_seed_1074": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_124",
+      "items": [
+        {
+          "productId": "prod_wings_06",
+          "name": "Spicy Buffalo Wings (6pcs)",
+          "qty": 1,
+          "price": 210
+        },
+        {
+          "productId": "prod_coke_03",
+          "name": "Chilled Coca-Cola (500ml)",
+          "qty": 1,
+          "price": 45
+        },
+        {
+          "productId": "prod_lavacake_07",
+          "name": "Chocolate Lava Cake",
+          "qty": 1,
+          "price": 110
+        }
+      ],
+      "baseAmount": 255,
+      "upsellAdded": true,
+      "upsellAmount": 110,
+      "totalAmount": 365,
+      "razorpayOrderId": "order_seed_1788409216665_74",
+      "razorpayPaymentId": "pay_seed_1788409216665_74",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-18T11:27:13.519Z"
+    },
+    "ord_seed_1075": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_100",
+      "items": [
+        {
+          "productId": "prod_pizza_04",
+          "name": "Margherita Woodfired Pizza",
+          "qty": 1,
+          "price": 280
+        },
+        {
+          "productId": "prod_garlicbread_05",
+          "name": "Cheesy Garlic Breadsticks",
+          "qty": 1,
+          "price": 120
+        }
+      ],
+      "baseAmount": 400,
+      "upsellAdded": false,
+      "upsellAmount": 0,
+      "totalAmount": 400,
+      "razorpayOrderId": "order_seed_1788409216666_75",
+      "razorpayPaymentId": "pay_seed_1788409216666_75",
+      "paymentStatus": "paid",
+      "createdAt": "2026-08-14T17:41:13.559Z"
+    },
+    "doc_1788409892609_1bjn": {
+      "merchantId": "merchant_default",
+      "customerId": "cust_guest",
+      "items": [
+        {
+          "price": 180,
+          "productId": "prod_burger_01",
+          "name": "Gourmet Cheeseburger",
+          "qty": 1
+        }
+      ],
+      "baseAmount": 180,
+      "upsellAdded": true,
+      "upsellAmount": 90,
+      "totalAmount": 270,
+      "razorpayOrderId": "order_mock_1788409892611_6q69",
+      "razorpayPaymentId": "",
+      "paymentStatus": "failed",
+      "createdAt": "2026-09-03T04:31:32.608Z",
+      "updatedAt": "2026-09-03T04:31:32.653Z"
+    }
+  }
+}
